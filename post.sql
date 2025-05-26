@@ -92,3 +92,7 @@ select extract(TIME FROM sighting_time) as time_of_day, count(*)
 -- 🐆 9. Delete rangers who have never sighted any species
 DELETE FROM rangers
     WHERE ranger_id NOT IN(SELECT ranger_id FROM sightings); 
+
+UPDATE persons 
+    set country = 'Bangladesh'
+    WHERE person_id = 10;
